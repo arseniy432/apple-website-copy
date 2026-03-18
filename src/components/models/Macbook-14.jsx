@@ -30,7 +30,7 @@ useEffect(() => {
       }
     }
   })
-}, [color])
+}, [color, scene])
 
   return (
     <group {...props} dispose={null}>
