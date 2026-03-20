@@ -1,7 +1,7 @@
 import { PresentationControls } from "@react-three/drei";
 import { useRef } from "react";
-import MacBookModel16 from "../models/Macbook-16";
-import MacBookModel14 from "../models/Macbook-14";
+import MacbookModel16 from "../models/Macbook-16";
+import MacbookModel14 from "../models/Macbook-14";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -61,13 +61,13 @@ const ModelSwitcher = ({ scale, isMobile}) => {
     <>
       <PresentationControls {... controlsConfig}>
         <group ref={largeMacbookRef}>
-          <MacBookModel16 scale={isMobile ? 0.05 : 0.08}/>
+          <MacbookModel16 scale={isMobile ? 0.05 : 0.08}/>
         </group>
       </PresentationControls>
 
-      <PresentationControls>
+      <PresentationControls {... controlsConfig}>
         <group ref={smallMacbookRef}>
-          <MacBookModel14 scale={isMobile ? 0.03 : 0.06}/>
+          <MacbookModel14 scale={isMobile ? 0.03 : 0.06}/>
         </group>
       </PresentationControls>
     </>
